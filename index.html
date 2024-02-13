@@ -7,7 +7,7 @@
   <title>Document</title>
 </head>
 
-<body>
+<!-- <body>
   <style>
     .body {
       background: radial-gradient(circle, rgba(232, 185, 206, 1) 12%, rgba(0, 26, 57, 1) 100%);
@@ -35,8 +35,38 @@
     <div class="box">BOX</div>
     <div class="box">BOX</div>
     <div class="box">BOX</div>
-  </div>
-  <script src="index.js"></script>
+  </div> -->
+<!-- <script src="index.js"></script>
+</body> -->
+
+
+<body>
+  <!-- ... Your HTML and CSS -->
+
+  <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+  <script type="module">
+    import { GoogleGenerativeAI } from "@google/generative-ai";
+
+    // Fetch your API_KEY
+    const API_KEY = "AIzaSyBRl8TUub5U2B7Ml-Y7MoO5FPYqAKdaaKs";
+
+    // Access your API key (see "Set up your API key" above)
+    const genAI = new GoogleGenerativeAI(API_KEY);
+    console.log(genAI);
+
+    // ...
+
+    const model = genAI.getGenerativeModel({ model: "x" });
+    console.log(model);
+    // ...
+  </script>
 </body>
 
 </html>
+AIzaSyBRl8TUub5U2B7Ml-Y7MoO5FPYqAKdaaKs
